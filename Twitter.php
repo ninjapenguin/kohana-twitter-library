@@ -1,5 +1,10 @@
 <?php
 
+/**
+ * Twitter library for simple twitter integration
+ *
+ * @author Matthew Wells (http://www.ninjapenguin.co.uk)
+ **/
 class Twitter_Core
 {
 	/*
@@ -25,6 +30,7 @@ class Twitter_Core
 		$this->password = $password;
 	}
 	
+	
 	/**
 	 * Get Status
 	 * Get the latest 20 status updates
@@ -33,6 +39,7 @@ class Twitter_Core
 	{
 		return Curl::get('http://twitter.com/statuses/user_timeline.'.$format, array(), false, array(CURLOPT_USERPWD => "$this->username:$this->password"));
 	}
+	
 	
 	/**
 	 * Set Status 
@@ -54,6 +61,7 @@ class Twitter_Core
 		
 		return Curl::post('http://twitter.com/statuses/update.json', $data, $headers, false, array(CURLOPT_USERPWD => "$this->username:$this->password"));
 	}
+	
 	
 	/**
 	 * Delete
