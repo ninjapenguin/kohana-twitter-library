@@ -1,0 +1,6 @@
+Simple twitter library for the Kohana PHP framework
+
+Depends on the Curl library (http://github.com/ninjapenguin/kohana-curl-library)
+
+Matt
+http://www.ninjapenguin.co.uk
